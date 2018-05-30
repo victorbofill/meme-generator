@@ -7,7 +7,7 @@ export default class App extends Component {
     super();
 
     this.state = {
-      image: 'https://www.pixelstalk.net/wp-content/uploads/2016/10/Blank-Wallpaper-HD-620x388.jpg',
+      image: null,
       header: '',
       footer: '',
       color: '#ffffff'
