@@ -10,7 +10,7 @@ export default class App extends Component {
       image: 'https://www.pixelstalk.net/wp-content/uploads/2016/10/Blank-Wallpaper-HD-620x388.jpg',
       header: '',
       footer: '',
-      color: '#000000'
+      color: '#ffffff'
     };
 
     this.handleImageSrc = this.handleImageSrc.bind(this);
@@ -110,15 +110,14 @@ export default class App extends Component {
 
           <div className="image-container"
             ref={node => this.imageExport = node}
+            style={{ backgroundImage: `url(${ image })` }}
           >
             <div className="header-container">
-              <h1 style={{ color }}>{header}</h1>
+              <h1 style={{ color }}>{header.toUpperCase()}</h1>
             </div>
-            
-            <img src={image}/>
 
             <div className="footer-container">
-              <h1 style={{ color }}>{footer}</h1>
+              <h1 style={{ color }}>{footer.toUpperCase()}</h1>
             </div>
           </div>
         </section>
