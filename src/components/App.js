@@ -94,10 +94,13 @@ export default class App extends Component {
           </div>
 
           <div>
-            <input
-              type="color"
-              onChange={event => this.handleColorChange(event)}
-            />
+            <label>
+              Font Color:
+              <input
+                type="color"
+                onChange={event => this.handleColorChange(event)}
+              />
+            </label>
           </div>
         </fieldset>
 

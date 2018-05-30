@@ -1,11 +1,22 @@
 body {
   background-color: grey;
   color: white;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: sans-serif;
+}
+
+fieldset {
+  width: fit-content;
+}
+
+div {
+  width: 100%;
+  text-align: left;
+  margin-bottom: .5em;
 }
 
 h1 {
-  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  font-family: 'Oswald', sans-serif;
   font-size: 5em;
   margin: 0;
   padding: 0;
