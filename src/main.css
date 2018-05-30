@@ -25,6 +25,10 @@ h1 {
   max-width: fit-content;
 }
 
+img {
+  display: block;
+}
+
 .header-container, .footer-container {
   position: absolute;
   text-align: center;
