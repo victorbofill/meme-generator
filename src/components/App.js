@@ -84,7 +84,7 @@ export default class App extends Component {
             <label>
               Footer:
               <input
-                value={footer}
+                onChange={event => this.handleFooterChange(event)}
               />
             </label>
           </div>
