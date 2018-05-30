@@ -12,6 +12,13 @@ export default class App extends Component {
       footer: '',
       color: '#000000'
     };
+
+    this.handleImageSrc = this.handleImageSrc.bind(this);
+    this.handleUpload = this.handleUpload.bind(this);
+    this.handleHeaderChange = this.handleHeaderChange.bind(this);
+    this.handleFooterChange = this.handleFooterChange.bind(this);
+    this.handleColorChange = this.handleColorChange.bind(this);
+    this.handleExport = this.handleExport.bind(this);
   }
 
   handleImageSrc({ target }) {
