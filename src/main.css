@@ -1,6 +1,5 @@
 body {
-  background-color: grey;
-  color: white;
+  color: black;
   font-family: sans-serif;
 }
 
@@ -11,7 +10,6 @@ fieldset {
 div {
   margin-bottom: .5em;
   text-align: left;
-  width: 100%;
 }
 
 h1 {
@@ -23,12 +21,8 @@ h1 {
 }
 
 .image-container {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 720px;
   position: relative;
-  width: 720px;
+  max-width: fit-content;
 }
 
 .header-container, .footer-container {
@@ -44,5 +38,4 @@ h1 {
 
 .header-container h1, .footer-container h1 {
   overflow: hidden;
-  position: relative;
 }
