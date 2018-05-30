@@ -9,17 +9,17 @@ fieldset {
 }
 
 div {
-  width: 100%;
-  text-align: left;
   margin-bottom: .5em;
+  text-align: left;
+  width: 100%;
 }
 
 h1 {
-  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   font-family: 'Oswald', sans-serif;
   font-size: 5em;
   margin: 0;
   padding: 0;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .image-container {
@@ -43,6 +43,6 @@ h1 {
 }
 
 .header-container h1, .footer-container h1 {
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
