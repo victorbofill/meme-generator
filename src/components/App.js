@@ -9,7 +9,8 @@ export default class App extends Component {
     this.state = {
       image: 'https://www.pixelstalk.net/wp-content/uploads/2016/10/Blank-Wallpaper-HD-620x388.jpg',
       header: '',
-      footer: ''
+      footer: '',
+      color: '#000000'
     };
   }
 
@@ -35,12 +36,16 @@ export default class App extends Component {
     this.setState({ footer: target.value });
   }
 
+  handleColorChange({ target }) {
+    this.setState({ color: target.value });
+  }
+
   render() {
-    const { image, header, footer } = this.state;
+    const { image, header, footer, color } = this.state;
 
     return (
       <main>
-        <section>
+        <fieldset>
           <div>
             <label>
               Image URL:
@@ -66,20 +71,6 @@ export default class App extends Component {
             </label>
           </div>
 
-          <div className="image-container"
-            ref={node => this.imageExport = node}
-          >
-            <div className="header-container">
-              <h1>{header}</h1>
-            </div>
-            
-            <img src={image}/>
-
-            <div className="footer-container">
-              <h1>{footer}</h1>
-            </div>
-          </div>
-
           <div>
             <label>
               Footer:
@@ -87,6 +78,29 @@ export default class App extends Component {
                 onChange={event => this.handleFooterChange(event)}
               />
             </label>
+          </div>
+
+          <div>
+            <input
+              type="color"
+              onChange={event => this.handleColorChange(event)}
+            />
+          </div>
+        </fieldset>
+
+        <section>
+          <div className="image-container"
+            ref={node => this.imageExport = node}
+          >
+            <div className="header-container">
+              <h1 style={{ color }}>{header}</h1>
+            </div>
+            
+            <img src={image}/>
+
+            <div className="footer-container">
+              <h1 style={{ color }}>{footer}</h1>
+            </div>
           </div>
         </section>
       </main>
