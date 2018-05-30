@@ -8,6 +8,8 @@ export default class App extends Component {
 
     this.state = {
       image: 'https://www.pixelstalk.net/wp-content/uploads/2016/10/Blank-Wallpaper-HD-620x388.jpg',
+      header: '',
+      footer: ''
     };
   }
 
@@ -25,15 +27,23 @@ export default class App extends Component {
     };
   }
 
+  handleHeaderChange({ target }) {
+    this.setState({ header: target.value });
+  }
+
+  handleFooterChange({ target }) {
+    this.setState({ footer: target.value });
+  }
+
   render() {
-    const { image } = this.state;
+    const { image, header, footer } = this.state;
 
     return (
       <main>
         <section>
           <div>
             <label>
-              Upload Image: 
+              Image URL:
               <input onChange={event => this.handleImageSrc(event)}/>
             </label>
           </div>
@@ -47,10 +57,36 @@ export default class App extends Component {
             </label>
           </div>
 
+          <div>
+            <label>
+              Header:
+              <input
+                onChange={event => this.handleHeaderChange(event)}
+              />
+            </label>
+          </div>
+
           <div className="image-container"
             ref={node => this.imageExport = node}
           >
+            <div className="header-container">
+              <h1>{header}</h1>
+            </div>
+            
             <img src={image}/>
+
+            <div className="footer-container">
+              <h1>{footer}</h1>
+            </div>
+          </div>
+
+          <div>
+            <label>
+              Footer:
+              <input
+                value={footer}
+              />
+            </label>
           </div>
         </section>
       </main>

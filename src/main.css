@@ -1,7 +1,19 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: grey;
+  color: white;
+  font-family: sans-serif;
 }
 
-.meme-text {
-  color: black;
+.header-container {
+  text-align: center;
+}
+
+.header-container h1 {
+}
+
+.footer-container {
+  text-align: center;
+}
+
+.footer-container h1 {
 }
