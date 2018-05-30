@@ -40,6 +40,12 @@ export default class App extends Component {
     this.setState({ color: target.value });
   }
 
+  handleExport() {
+    dom2image.toBlob(this.imageExport).then(blob => {
+      fileSaver.saveAs(blob, 'image.png');
+    });
+  }
+
   render() {
     const { image, header, footer, color } = this.state;
 
@@ -89,6 +95,12 @@ export default class App extends Component {
         </fieldset>
 
         <section>
+          <div>
+            <button onClick={() => this.handleExport()}>
+              Export Image
+            </button>
+          </div>
+
           <div className="image-container"
             ref={node => this.imageExport = node}
           >
